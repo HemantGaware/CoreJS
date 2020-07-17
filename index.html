@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Core JS Questions</title>
+</head>
+<body>
+    <script>
+
+        //First Assignment code start here
+
+        let arrayOne = [1,0,2,3,4];
+        let arrayTwo = [3,5,6,7,8,13];
+        calculateSum(arrayOne,arrayTwo);
+        function calculateSum(paramO,paramT){
+            let maxLength = paramO.length > paramT.length ? paramO.length : paramT.length ;
+            let sum = [];
+            for(let i = 0; i < maxLength; i++){
+                if(paramO[i] && paramT[i]){
+                    sum.push(paramO[i] + paramT[i]);
+                }else if(paramO[i]){
+                    sum.push(paramO[i]);
+                }else{
+                    sum.push(paramT[i]);
+                }
+            }
+            console.log(sum);
+        }
+
+        //First Assignment code end here   
+
+        //Second Assignment code start here    
+
+        window.addEventListener('resize', getHeightAndWidth); 
+        function getHeightAndWidth(){
+             console.log(`Window height is = ${window.innerHeight} Window width is = ${window.innerWidth}`);
+        }
+
+        //Second Assignment code end here   
+
+        //Third Assignment code start here
+
+        var library = [ 
+            {
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins',
+                title:  'Mockingjay: The Final Book of The Hunger Games', 
+                readingStatus: false
+            }];
+
+        displayBookStatus(library);    
+        function displayBookStatus(books){
+            for(book of books){
+                console.log(`Book Title is "${book.title}" and the Reading status is "${book.readingStatus}"`);
+            }   
+        }    
+         
+        //Third Assignment code End here
+
+        //Forth Assignment code start here
+
+        stringToArray("Robin Singh");
+        function stringToArray(data){
+            let arr = data.split(' ');
+            console.log(arr);   
+        }    
+
+        //Forth Assignment code end here
+
+        //Fifth Assignment code start here
+        primeNumber(12);
+            function primeNumber(data){
+                var data = Math.round(data);
+                if(typeof(data) === "number"){
+                    (data % 2) ===  1 || data ? console.log(`${data} is a Prime Number`) : console.log(`${data} is not a Prime Number`); 
+                }else{
+                    alert("Please provide valid value.");
+                }
+            }
+        //Fifth Assignment code end here
+
+        //Sixth Assignment code start here
+
+            function fizzBuzz(){
+                for(let i = 1; i <= 100; i++){
+                    i % 3 === 0 && i % 5 === 0 ? console.log('FizzBuzz'):
+                                                 i % 3 === 0 ? console.log('Fizz') :
+                                                               i % 5 === 0 ? console.log('Buzz') :
+                                                                             console.log(i);       
+                }
+            }
+            fizzBuzz();
+
+        //Sixth Assignment code End here
+
+        //Seventh Assignment code start here
+             
+             function reversString(arg){
+                 let value = String(arg);
+                 let str = "";
+                for(let i = value.length; i >= 1; i--){
+                    str += value.slice(i-1, i);
+                }
+                console.log(Number(str));
+             }
+             reversString(32243);
+
+        //Seventh Assignment code End here
+
+        //Eight Assignment code start here
+
+           function findLongString(str){
+                let getArray = str.split(' ');
+                let len =  getArray[0].length;
+                let bigOne =  '';
+                for(let strO of getArray){
+                    if(strO.length > len){
+                        len = strO.length;
+                        bigOne = strO;
+                    }
+                }
+                console.log(bigOne);
+           }     
+
+        //    findLongString('Web Development Tutorial');
+
+            
+        //Eight Assignment code end here
+    </script>
+</body>
+</html>
+
+
