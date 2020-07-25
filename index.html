@@ -77,16 +77,25 @@
         //Forth Assignment code end here
 
         //Fifth Assignment code start here
-//         primeNumber(12);
-//             function primeNumber(data){
-//                 var data = Math.round(data);
-//                 if(typeof(data) === "number"){
-//                     (data % 2) ===  1 || data ? console.log(`${data} is a Prime Number`) : console.log(`${data} is not a Prime Number`); 
-//                 }else{
-//                     alert("Please provide valid value.");
-//                 }
-//             }
-        //I am not able to find logic for it
+//         
+        function getPrimeNum(paramtr){
+        if( paramtr == 1 ){
+           return("Number should gretar than 1"); 
+        }else if( paramtr == 2 ){
+            return("This is prime number"); 
+        }else{
+				for (let i = 2; i < paramtr; i++){
+					if(paramtr % i == 0){
+						return "This is not prime";
+					}else{
+                        return "This is number is prime";
+                     }	
+				}
+					
+			}
+    }
+    getPrimeNum(5);
+        
         //Fifth Assignment code end here
 
         //Sixth Assignment code start here
