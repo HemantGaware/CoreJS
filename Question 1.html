@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let arrayOne = [1,0,2,3,4];
+        let arrayTwo = [3,5,6,7,8,13];
+        
+        function calculateSum(paramO,paramT){
+            let maxLength = paramO.length > paramT.length ? paramO.length : paramT.length ;
+            let sum = [];
+            for(let i = 0; i < maxLength; i++){
+                if(paramO[i] && paramT[i]){
+                    sum.push(paramO[i] + paramT[i]);
+                }else if(paramO[i]){
+                    sum.push(paramO[i]);
+                }else{
+                    sum.push(paramT[i]);
+                }
+            }
+            return sum;
+        }
+        console.log(calculateSum(arrayOne,arrayTwo));
+    </script>
+</body>
+</html>

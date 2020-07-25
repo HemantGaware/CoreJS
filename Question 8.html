@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+            function findLongString(str){
+                let getArray = str.split(' ');
+                let len =  getArray[0].length;
+                let bigOne =  '';
+                for(let strO of getArray){
+                    if(strO.length > len){
+                        len = strO.length;
+                        bigOne = strO;
+                    }
+                }
+                console.log(bigOne);
+           }     
+           findLongString('Web Development Tutorial');
+    </script>
+</body>
+</html>
