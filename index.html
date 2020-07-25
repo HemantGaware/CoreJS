@@ -31,11 +31,11 @@
 
         //Second Assignment code start here    
 
-        window.addEventListener('resize', getHeightAndWidth); 
+        
         function getHeightAndWidth(){
              console.log(`Window height is = ${window.innerHeight} Window width is = ${window.innerWidth}`);
         }
-
+	window.addEventListener('resize', getHeightAndWidth); 
         //Second Assignment code end here   
 
         //Third Assignment code start here
@@ -57,42 +57,42 @@
                 readingStatus: false
             }];
 
-        displayBookStatus(library);    
+           
         function displayBookStatus(books){
             for(book of books){
                 console.log(`Book Title is "${book.title}" and the Reading status is "${book.readingStatus}"`);
             }   
         }    
-         
+         displayBookStatus(library); 
         //Third Assignment code End here
 
         //Forth Assignment code start here
 
-        stringToArray("Robin Singh");
+        
         function stringToArray(data){
             let arr = data.split(' ');
             console.log(arr);   
         }    
-
+	stringToArray("Robin Singh");
         //Forth Assignment code end here
 
         //Fifth Assignment code start here
 //         
-        function getPrimeNum(paramtr){
-        if( paramtr == 1 ){
+        function getPrimeNum(param){
+        if( param == 1 ){
            return("Number should gretar than 1"); 
-        }else if( paramtr == 2 ){
+        }else if( param == 2 ){
             return("This is prime number"); 
         }else{
-				for (let i = 2; i < paramtr; i++){
-					if(paramtr % i == 0){
-						return "This is not prime";
-					}else{
-                        return "This is number is prime";
-                     }	
-				}
+		for (let i = 2; i < param; i++){
+			if(param % i == 0){
+			    return "Not a prime";
+			}else{
+                        return "Number is prime number";
+                     	}	
+		}
 					
-			}
+	}
     }
     getPrimeNum(5);
         
@@ -141,7 +141,7 @@
                 console.log(bigOne);
            }     
 
-        //    findLongString('Web Development Tutorial');
+           findLongString('Web Development Tutorial');
 
             
         //Eight Assignment code end here
